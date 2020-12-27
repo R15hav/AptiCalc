@@ -1,6 +1,6 @@
 # Aptitude Calculator 
 
-**Website**:- [https://apti-calc.herokuapp.com](https://apti-calc.herokuapp.com)
+[**Website**:- https://apti-calc.herokuapp.com](https://apti-calc.herokuapp.com)
 
 **Hey there everyone!** 🎉<br>
 Are you struggling with Aptitude solving? If yes. <br>
