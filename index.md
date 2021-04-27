@@ -14,5 +14,11 @@ Then here is a simple tool for you to use. [**Apti-calc**](https://apti-calc.her
 3. Select the type of aptitude question you need to solve . Select the function from dropdown.
 4. You are all set to go. Input the values in the respective fields and voila!🎉
 
-
+## Features:-
+1. Simple Interest and Compound Interest Calculator
+2. Profit and Loss Calculator
+3. Volume and Surface Area Calculator
+4. Percentage Calculator
+5. HCF and LCM Calculator
+6. Permutation and Combination Calculator
 
