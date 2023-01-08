@@ -1,0 +1,51 @@
+<style>
+body {
+    background-image: url("/static/background.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+
+  h1,h2,h3,h4,h5,h6{
+    color: white;
+  }
+
+  button[type="reset"]{
+    background-color:rgb(93, 113, 119,1);
+    color: white;
+  }
+  
+
+{% include "flip.html" %}
+
+.card{
+  box-shadow: 0 0 5px 0 ;
+  background: inherit;
+  backdrop-filter: blur(10px);
+  margin: 30px;
+}
+
+.jumbotron{
+  background:rgba(0,0,0,0.2);
+  backdrop-filter: blur(50px);
+  padding:15px  ;
+  margin: 0px;  
+}
+
+.footer{
+  left: 0;
+  bottom: 0;
+  background: rgba(0,0,0);
+  position: fixed;
+  width: 100%;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+.container{
+  margin: 0%;
+  font-family: 'VT323', monospace;
+}
+
+</style>
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">

@@ -1,0 +1,227 @@
+<div class="collapse" id="collapse_cube" >
+    <div class="card card-body ">
+        <button class="btn close" data-toggle="collapse" href="#collapse_cube" role="button" aria-expanded="false" > 
+                <span aria-hidden="true">×</span> 
+                </button>
+        <div class="container-fluid">
+            <div class="jumbotron" onclick="nonegetive(this)">                 
+                <p class="font-weight-bold"><h2>CUBE </h2></p>
+
+                <form id="cube" >
+                    <div class="input-group mb-3">
+                      <input type="number" id="a" min="0" step="0.01" class="form-control" placeholder="a = Edge lenght of cube" 
+                      oninput="x.value= cube.volume(parseFloat(a.value)).toFixed(2); y.value=cube.surface(parseFloat(a.value)).toFixed(2) ; z.value=cube.diag(parseFloat(a.value)).toFixed(2) ">
+                      <div class="input-group-append">
+                        <button class="btn btn-outline-secondary" type="reset">Reset</button>
+                      </div>
+                    </div>
+                    <div class="alert alert-primary" role="alert">
+                      <div><span><strong>Volume: </strong></span><output id="x" name="x"
+                          form="cube">0</output></div>
+                    </div>
+                    <div class="alert alert-primary" role="alert">
+                      <div><span><strong>Total Surface Area: </strong></span><output id="y" name="y"
+                          form="cube">0</output></div>
+                    </div>
+
+                    <div class="alert alert-primary" role="alert">
+                        <div><span><strong>Diagonal: </strong></span><output id="z" name="z"
+                            form="cube">0</output></div>
+                    </div>
+                  </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="collapse" id="collapse_cuboid" >
+  <div class="card card-body">
+      <button class="btn close" data-toggle="collapse" href="#collapse_cuboid" role="button" aria-expanded="false" > 
+              <span aria-hidden="true">×</span> 
+              </button>
+      <div class="container-fluid">
+          <div class="jumbotron" onclick="nonegetive(this)">                 
+              <p class="font-weight-bold"><h2>CUBOID </h2></p>
+
+              <form id="cuboid" 
+              oninput="x.value= cuboid.volume(parseFloat(l.value),parseFloat(b.value),parseFloat(h.value)).toFixed(2);
+               y.value=cuboid.surface(parseFloat(l.value),parseFloat(b.value),parseFloat(h.value)).toFixed(2) ;
+                z.value=cuboid.diag(parseFloat(l.value),parseFloat(b.value),parseFloat(h.value)).toFixed(2) " >
+                  <div class="input-group mb-3">
+                    <input type="number" id="l" min="0" step="0.01" class="form-control" placeholder="Length">
+                    <input type="number" id="b" min="0" step="0.01" class="form-control" placeholder="Breadth">
+                    <input type="number" id="h" min="0" step="0.01" class="form-control" placeholder="Height">
+                    <div class="input-group-append">
+                      <button class="btn btn-outline-secondary" type="reset">Reset</button>
+                    </div>
+                  </div>
+                  <div class="alert alert-primary" role="alert">
+                    <div><span><strong>Volume: </strong></span><output id="x" name="x"
+                        form="cuboid">0</output></div>
+                  </div>
+                  <div class="alert alert-primary" role="alert">
+                    <div><span><strong>Total Surface Area: </strong></span><output id="y" name="y"
+                        form="cuboid">0</output></div>
+                  </div>
+
+                  <div class="alert alert-primary" role="alert">
+                      <div><span><strong>Diagonal: </strong></span><output id="z" name="z"
+                          form="cuboid">0</output></div>
+                  </div>
+                </form>
+          </div>
+      </div>
+  </div>
+</div>
+
+<div class="collapse" id="collapse_cylinder" >
+  <div class="card card-body">
+      <button class="btn close" data-toggle="collapse" href="#collapse_cylinder" role="button" aria-expanded="false" > 
+              <span aria-hidden="true">×</span> 
+              </button>
+      <div class="container-fluid">
+          <div class="jumbotron" onclick="nonegetive(this)">                 
+              <p class="font-weight-bold"><h2>CYLINDER </h2></p>
+
+              <form id="cyli" 
+              oninput="x.value= cyl.volume(parseFloat(r.value),parseFloat(h.value)).toFixed(2);
+               y.value=cyl.surface(parseFloat(r.value),parseFloat(h.value)).toFixed(2) ;
+                z.value=cyl.diag(parseFloat(r.value),parseFloat(h.value)).toFixed(2) " >
+                  <div class="input-group mb-3">
+                    <input type="number" id="r" min="0" step="0.01" class="form-control" placeholder="Radius of base">
+                    <input type="number" id="h" min="0" step="0.01" class="form-control" placeholder="Height">
+                    <div class="input-group-append">
+                      <button class="btn btn-outline-secondary" type="reset">Reset</button>
+                    </div>
+                  </div>
+                  <div class="alert alert-primary" role="alert">
+                    <div><span><strong>Volume: </strong></span><output id="x" name="x"
+                        form="cyli">0</output></div>
+                  </div>
+                  <div class="alert alert-primary" role="alert">
+                    <div><span><strong>Curved Surface Area: </strong></span><output id="y" name="y"
+                        form="cyli">0</output></div>
+                  </div>
+
+                  <div class="alert alert-primary" role="alert">
+                      <div><span><strong>Total Surface Area: </strong></span><output id="z" name="z"
+                          form="cyli">0</output></div>
+                  </div>
+                </form>
+          </div>
+      </div>
+  </div>
+</div>
+
+<div class="collapse" id="collapse_cone" >
+  <div class="card card-body">
+      <button class="btn close" data-toggle="collapse" href="#collapse_cone" role="button" aria-expanded="false" > 
+              <span aria-hidden="true">×</span> 
+              </button>
+      <div class="container-fluid">
+          <div class="jumbotron" onclick="nonegetive(this)">                 
+              <p class="font-weight-bold"><h2>CONE </h2></p>
+
+              <form id="cone" 
+              oninput=" x.value=cone.sla(parseFloat(r.value),parseFloat(h.value)).toFixed(2);
+              y.value= cone.volume(parseFloat(r.value),parseFloat(h.value)).toFixed(2);
+               z.value=cone.surface(parseFloat(r.value),parseFloat(h.value)).toFixed(2) ;
+                a.value=cone.diag(parseFloat(r.value),parseFloat(h.value)).toFixed(2) " >
+                  <div class="input-group mb-3">
+                    <input type="number" id="r" min="0" step="0.01" class="form-control" placeholder="Radius of base">
+                    <input type="number" id="h" min="0" step="0.01" class="form-control" placeholder="Height">
+                    <div class="input-group-append">
+                      <button class="btn btn-outline-secondary" type="reset">Reset</button>
+                    </div>
+                  </div>
+                  <div class="alert alert-primary" role="alert">
+                    <div><span><strong>Slant Height: </strong></span><output id="x" name="x"
+                        form="cone">0</output></div>
+                  </div>
+                  <div class="alert alert-primary" role="alert">
+                    <div><span><strong>Volume: </strong></span><output id="y" name="y"
+                        form="cone">0</output></div>
+                  </div>
+                  <div class="alert alert-primary" role="alert">
+                    <div><span><strong>Curved Surface Area: </strong></span><output id="z" name="z"
+                        form="cone">0</output></div>
+                  </div>
+
+                  <div class="alert alert-primary" role="alert">
+                      <div><span><strong>Total Surface Area: </strong></span><output id="a" name="a"
+                          form="cone">0</output></div>
+                  </div>
+                </form>
+          </div>
+      </div>
+  </div>
+</div>
+
+<div class="collapse" id="collapse_sphere" >
+  <div class="card card-body">
+      <button class="btn close" data-toggle="collapse" href="#collapse_sphere" role="button" aria-expanded="false" > 
+              <span aria-hidden="true">×</span> 
+              </button>
+      <div class="container-fluid">
+          <div class="jumbotron" onclick="nonegetive(this)">                 
+              <p class="font-weight-bold"><h2>SPHERE </h2></p>
+
+              <form id="sphere" 
+              oninput="x.value= sph.volume(parseFloat(a.value)).toFixed(2); 
+              y.value= sph.surface(parseFloat(a.value)).toFixed(2) ;">
+                  <div class="input-group mb-3">
+                    <input type="number" id="a" min="0" step="0.01" class="form-control" placeholder="r = Radius" >
+                    <div class="input-group-append">
+                      <button class="btn btn-outline-secondary" type="reset">Reset</button>
+                    </div>
+                  </div>
+                  <div class="alert alert-primary" role="alert">
+                    <div><span><strong>Volume: </strong></span><output id="x" name="x"
+                        form="sphere">0</output></div>
+                  </div>
+                  <div class="alert alert-primary" role="alert">
+                    <div><span><strong>Total Surface Area: </strong></span><output id="y" name="y"
+                        form="sphere">0</output></div>
+                  </div>
+                </form>
+          </div>
+      </div>
+  </div>
+</div>
+
+<div class="collapse" id="collapse_hsphere" >
+  <div class="card card-body">
+      <button class="btn close" data-toggle="collapse" href="#collapse_hsphere" role="button" aria-expanded="false" > 
+              <span aria-hidden="true">×</span> 
+              </button>
+      <div class="container-fluid">
+          <div class="jumbotron" onclick="nonegetive(this)">                 
+              <p class="font-weight-bold"><h2>HEMISPHERE </h2></p>
+
+              <form id="hsphere" 
+              oninput="x.value= hsph.volume(parseFloat(a.value)).toFixed(2); 
+              y.value= hsph.surface(parseFloat(a.value)).toFixed(2) ;
+              z.value=hsph.diag(parseFloat(a.value)).toFixed(2) ;">
+                  <div class="input-group mb-3">
+                    <input type="number" id="a" min="0" step="0.01" class="form-control" placeholder="r = Radius" >
+                    <div class="input-group-append">
+                      <button class="btn btn-outline-secondary" type="reset">Reset</button>
+                    </div>
+                  </div>
+                  <div class="alert alert-primary" role="alert">
+                    <div><span><strong>Volume: </strong></span><output id="x" name="x"
+                        form="hsphere">0</output></div>
+                  </div>
+                  <div class="alert alert-primary" role="alert">
+                    <div><span><strong>Curved Surface Area: </strong></span><output id="y" name="y"
+                        form="hsphere">0</output></div>
+                  </div>
+                  <div class="alert alert-primary" role="alert">
+                    <div><span><strong>Total Surface Area: </strong></span><output id="z" name="z"
+                        form="hsphere">0</output></div>
+                  </div>
+                </form>
+          </div>
+      </div>
+  </div>
+</div>

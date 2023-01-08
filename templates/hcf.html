@@ -1,0 +1,49 @@
+<div class="collapse" id="collapse_hcf_lcm" >
+    <div class="card card-body ">
+        <button class="btn close" data-toggle="collapse" href="#collapse_hcf_lcm" role="button" aria-expanded="false" > 
+                <span aria-hidden="true">×</span> 
+                </button>
+        <div class="container-fluid">
+            <div class="jumbotron" onclick="nonegetive_with_comma(this)">                 
+                <p class="font-weight-bold"><h1>HCF & LCM</h1></p>
+
+                <form id="form_hcf_1" >
+                  <div class="input-group mb-3">
+                    <input type="text" id="r" class="form-control" placeholder="Enter comma seperated values" aria-label="pop">
+                    <div class="input-group-append">
+                      <button class="btn btn-outline-secondary bg-dark" type="button" onclick="x.value=gcd_more_than_two_numbers(r.value);y.value=lcm(r.value)">=</button>
+                    </div>
+                  </div>
+                  <div class="alert alert-primary" role="alert">
+                    <div><span><strong>HCF: </strong></span><output name="x"
+                        form="form_hcf_1">0</output></div>
+                  </div>
+                  <div class="alert alert-primary" role="alert">
+                    <div><span><strong>LCM: </strong></span><output name="y"
+                        form="form_hcf_1">0</output></div>
+                  </div>
+                </form>
+                
+                <p> <h3>HCF and LCM of Fraction:-</h3> </p>
+                <form id="form_hcf_3" >
+                  <div class="input-group mb-3">
+                    <input type="text" id="n" class="form-control" placeholder="Enter comma seperated Numerators" aria-label="pop">
+                    <input type="text" id="d" class="form-control" placeholder="Enter comma seperated Denominators" aria-label="pop">
+                    <div class="input-group-append">
+                      <button class="btn btn-outline-secondary bg-dark" type="button" onclick="x.value=hcf_fract(n.value,d.value,1); y.value=hcf_fract(n.value,d.value,2)">=</button>
+                    </div>
+                  </div>
+                  <div class="alert alert-primary" role="alert">
+                    <div><span><strong>HCF: </strong></span><output name="x"
+                        form="form_hcf_3">0</output></div>
+                  </div>
+                  <div class="alert alert-primary" role="alert">
+                  <div><span><strong>LCM: </strong></span><output name="y"
+                    form="form_hcf_3">0</output></div>
+                 </div>
+                 </div>
+                </form>
+
+            </div>
+        </div>
+    </div>

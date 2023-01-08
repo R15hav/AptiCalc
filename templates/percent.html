@@ -1,0 +1,202 @@
+<div class="collapse" id="collapse_percent_i">
+  <div class="card card-body ">
+    <button class="btn close" data-toggle="collapse" href="#collapse_percent_i" role="button" aria-expanded="false">
+      <span aria-hidden="true">×</span>
+    </button>
+    <div class="container-fluid">
+      <div class="jumbotron" onclick="nonegetive(this)">
+
+        <p class="font-weight-bold">
+        <h1>% increase/decrease</h1>
+        </p>
+        <form id="form_p_1" onsubmit="return false" oninput="x.value=percent_inc(parseFloat(r.value)).toFixed(2)">
+          <p>
+          <h5>If the price of a commodity increases by R%, then the reduction in consumption so as not to increase the
+            expenditure is:</h5>
+          </p>
+          <div class="input-group mb-3">
+            <input type="number" id="r" min="0" step="0.01" class="form-control"
+              placeholder="Enter the comodity increase %age" aria-label="p" required>
+            <div class="input-group-append">
+              <button class="btn btn-outline-secondary" type="reset">reset R</button>
+            </div>
+          </div>
+
+          <div class="alert alert-primary" role="alert">
+            <div id="result_44"><span><strong>Reduced Consumption: </strong></span><output name="x"
+                form="form_p_1">0</output><span>% reduced consumption</span></div>
+          </div>
+        </form>
+
+        <p>
+        <h5>If the price of a commodity decreases by R%, then the increase in consumption so as not to decrease the
+          expenditure is:
+        </h5>
+        </p>
+        <form id="form_p_2" onsubmit="return false" oninput="x.value=percent_dec(parseFloat(r.value)).toFixed(2)">
+          <div class="input-group mb-3">
+            <input type="number" id="r" min="0" step="0.01" class="form-control"
+              placeholder="Enter the comodity decrease %age" aria-label="p" required>
+            <div class="input-group-append">
+              <button class="btn btn-outline-secondary" type="reset">reset Rate</button>
+            </div>
+          </div>
+          <div class="alert alert-primary" role="alert">
+            <div id="result_44"><span><strong>Increased Consumption: </strong></span><output name="x"
+                form="form_p_2">0</output><span>% increased consumption</span></div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="collapse" id="collapse_percent_p">
+  <div class="card card-body ">
+    <button class="btn close" data-toggle="collapse" href="#collapse_percent_p" role="button" aria-expanded="false">
+      <span aria-hidden="true">×</span>
+    </button>
+    <div class="container-fluid">
+      <div class="jumbotron" onclick="nonegetive(this)">
+
+        <p class="font-weight-bold">
+        <h1>Results on population</h1>
+        </p>
+        <p>
+        <h5>Let the population of a town be P now and suppose it increases at the rate of R% per annum, then:</h5>
+        </p>
+        <p>
+          <strong>P=</strong>Population ||
+          <strong>R=</strong>Percentage increase in Population ||
+          <strong>n=</strong>Time in years
+        </p>
+        <p>
+        <h5> Population after n years </h5>
+        </p>
+        <form id="form_p_3" onsubmit="return false" oninput="x.value=percent_pop_inc(parseFloat(p.value),parseFloat(n.value),parseFloat(r.value)).toFixed(2)">
+          <div class="input-group mb-3">
+            <input type="number" min="0" step="0.01" id="p" class="form-control" placeholder="Enter P" aria-label="lcm">
+            <input type="number" min="0" step="0.01" id="n" class="form-control" placeholder="Enter n" aria-label="lcm">
+            <input type="number" min="0" step="0.01" id="r" class="form-control" placeholder="Enter R" aria-label="lcm">
+            <div class="input-group-append">
+              <button class="btn btn-outline-secondary" type="reset">Reset</button>
+            </div>
+          </div>
+          <div class="alert alert-primary" role="alert">
+            <div><span><strong>Population: </strong></span><output name="x"
+                form="form_p_3">0</output></div>
+          </div>
+        </form>
+
+        <p>
+        <h5> Population n years ago </h5>
+        </p>
+        <form id="form_p_4" onsubmit="return false" oninput="x.value=percent_pop_dec(parseFloat(p.value),parseFloat(n.value),parseFloat(r.value)).toFixed(2)">
+        <div class="input-group mb-3">
+          <input type="number" id="p" step="0.01" class="form-control" placeholder="Enter p" aria-label="pop">
+          <input type="number" id="n" step="0.01" class="form-control" placeholder="Enter n" aria-label="time">
+          <input type="number" id="r" step="0.01" class="form-control" placeholder="Enter R" aria-label="rate">
+          <div class="input-group-append">
+            <button class="btn btn-outline-secondary" type="reset">Reset</button>
+          </div>
+        </div>
+        <div class="alert alert-primary" role="alert">
+          <div><span><strong>Population: </strong></span><output name="x"
+              form="form_p_4">0</output></div>
+        </div>
+      </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="collapse" id="collapse_percent_d">
+  <div class="card card-body ">
+    <button class="btn close" data-toggle="collapse" href="#collapse_percent_d" role="button" aria-expanded="false">
+      <span aria-hidden="true">×</span>
+    </button>
+    <div class="container-fluid">
+      <div class="jumbotron" onclick="nonegetive(this)">
+
+        <p class="font-weight-bold">
+        <h1>Results on Depreciation</h1>
+        </p>
+        <p>
+        <h5>Let the present value of a machine be P. Suppose it depreciates at the rate of R% per annum. Then:</h5>
+        </p>
+        <p>
+        <h5> Value of the machine after n years = </h5>
+        </p>
+        <form id="form_p_5" onsubmit="return false" oninput="x.value=machine_after_n_years(parseFloat(p.value),parseFloat(n.value),parseFloat(r.value)).toFixed(2)">
+          <div class="input-group mb-3">
+            <input type="number" id="p" step="0.01" class="form-control" placeholder="Enter p" aria-label="pop">
+            <input type="number" id="n" step="0.01" class="form-control" placeholder="Enter n" aria-label="time">
+            <input type="number" id="r" step="0.01" class="form-control" placeholder="Enter R" aria-label="rate">
+            <div class="input-group-append">
+              <button class="btn btn-outline-secondary" type="reset">Reset</button>
+            </div>
+          </div>
+          <div class="alert alert-primary" role="alert">
+            <div><span><strong>Value: </strong></span><output name="x"
+                form="form_p_5">0</output></div>
+          </div>
+        </form>
+
+        <p>
+        <h5> Value of the machine n years ago </h5>
+        </p>
+        <form id="form_p_6" onsubmit="return false" oninput="x.value=machine_n_years_ago(parseFloat(p.value),parseFloat(n.value),parseFloat(r.value)).toFixed(2)">
+          <div class="input-group mb-3">
+            <input type="number" id="p" step="0.01" class="form-control" placeholder="Enter p" aria-label="pop">
+            <input type="number" id="n" step="0.01" class="form-control" placeholder="Enter n" aria-label="time">
+            <input type="number" id="r" step="0.01" class="form-control" placeholder="Enter R" aria-label="rate">
+            <div class="input-group-append">
+              <button class="btn btn-outline-secondary" type="reset">Reset</button>
+            </div>
+          </div>
+          <div class="alert alert-primary" role="alert">
+            <div><span><strong>Value: </strong></span><output name="x"
+                form="form_p_6">0</output></div>
+          </div>
+        </form>
+
+        <p>
+        <h5>
+          <p>
+          <h5> If A is R% more than B, then B is less than A by </h5>
+          </p>
+          <form id="form_p_7" onsubmit="return false" oninput="x.value=A_more_B(parseFloat(r.value)).toFixed(2)">
+            <div class="input-group mb-3">
+              <input type="number" id="r" step="0.01" class="form-control" placeholder="Enter r" aria-label="pop">
+              <div class="input-group-append">
+                <button class="btn btn-outline-secondary" type="reset">Reset</button>
+              </div>
+            </div>
+            <div class="alert alert-primary" role="alert">
+              <div><span><strong>Value: </strong></span><output name="x"
+                  form="form_p_7">0</output><span> %</span></div>
+            </div>
+          </form>
+
+          <p>
+          <h5>If A is R% less than B, then B is more than A by </h5>
+          </p>
+          
+          <form id="form_p_8" onsubmit="return false" oninput="x.value=A_less_B(parseFloat(r.value)).toFixed(2)">
+            <div class="input-group mb-3">
+              <input type="number" id="r" step="0.01" class="form-control" placeholder="Enter r" aria-label="pop">
+              <div class="input-group-append">
+                <button class="btn btn-outline-secondary" type="reset">Reset</button>
+              </div>
+            </div>
+            <div class="alert alert-primary" role="alert">
+              <div><span><strong>Value: </strong></span><output name="x"
+                  form="form_p_8">0</output> <span> %</span> </div>
+            </div>
+          </form>
+
+
+      </div>
+    </div>
+  </div>
+</div>

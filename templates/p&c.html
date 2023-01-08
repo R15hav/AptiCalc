@@ -1,0 +1,33 @@
+<div class="collapse" id="collapse_perm_c" >
+    <div class="card card-body ">
+        <button class="btn close" data-toggle="collapse" href="#collapse_perm_c" role="button" aria-expanded="false" > 
+                <span aria-hidden="true">×</span> 
+                </button>
+        <div class="container-fluid">
+            <div class="jumbotron" onclick="nonegetive_without_dot(this)">                 
+                <p class="font-weight-bold"><h2>Permutation & Combination</h2></p>
+                <p class="font-weight-bold"><h5>"n" things take "r" at a time</h5></p>
+
+                <form id="p_c" onsubmit="return false" >
+                  <div class="input-group mb-3">
+                    <input type="number" id="n" class="form-control" placeholder="Enter n" >
+                    <input type="number" id="r" class="form-control" placeholder="Enter r" >
+                    <div class="input-group-append">
+                        <button class="btn btn-outline-secondary bg-dark" type="button" onclick="x.value=perm(parseInt(n.value),parseInt(r.value)); 
+                        y.value=comb(parseInt(n.value),parseInt(r.value))" >=</button>
+                        
+                    </div>
+                  </div>
+                  <div class="alert alert-primary" role="alert">
+                    <div><span><strong>Permutation: </strong></span><output name="x"
+                        form="p_c">0</output></div>
+                  </div>
+                  <div class="alert alert-primary" role="alert">
+                    <div><span><strong>Combination: </strong></span><output name="y"
+                        form="p_c">0</output></div>
+                  </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

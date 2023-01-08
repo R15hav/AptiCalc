@@ -1,0 +1,195 @@
+<div class="collapse" id="collapse_profit">
+    <div class="card card-body">
+        <button class="btn close" data-toggle="collapse" href="#collapse_profit" role="button" aria-expanded="false">
+            <span aria-hidden="true">×</span>
+        </button>
+        <div class="container-fluid">
+            <div class="jumbotron" onclick="nonegetive(this)">
+            <p class="font-weight-bold">
+            <h1>Profit & Profit%</h1>
+            </p>
+
+            <form id="form_profit_1" onsubmit="return false" oninput="x.value= profit(parseFloat(Sp.value),parseFloat(Cp.value)).toFixed(2) ;
+                y.value=perc(parseFloat(x.value),parseFloat(Cp.value)).toFixed(2)">
+            <div class="mt-1 mb-1 ml-1 mr-1 input-group">
+            <div class="input-group-prepend">
+              <button class="btn btn-outline-secondary" type="reset">Reset Profit</button>
+            </div>
+            <input type="number" id="Sp" min="0" step="0.01" class="form-control" placeholder="Enter Selling price" 
+              required>
+            <input type="number" id="Cp" min="0" step="0.01" class="form-control" placeholder="Enter Cost price" 
+              required>
+          </div>
+            <div class="alert alert-primary" role="alert">
+            <div id="result1"><span><strong>Profit: </strong></span><output id="x" name="x"
+                form="form_profit_1">0</output></div>
+            <div id="result2"><span><strong>Profit(%): </strong></span><output id="y" name="y"
+                form="form_profit_1">0</output><span> %</span></div>
+            </div>
+            </form>
+
+            <hr class="my-4">
+            
+            <p class="font-weight-bold">
+            <h1>Loss & Loss%</h1>
+            </p>
+            
+            <form id="form_loss_1" onsubmit="return false" oninput="x.value= profit(parseFloat(Cp.value),parseFloat(Sp.value)).toFixed(2) ;
+                y.value=perc(parseFloat(x.value),parseFloat(Cp.value)).toFixed(2)">
+            <div class="mt-1 mb-1 ml-1 mr-1 input-group">
+            <div class="input-group-prepend">
+              <button class="btn btn-outline-secondary" type="reset">Reset Profit</button>
+            </div>
+            <input type="number" id="Sp" min="0" step="0.01" class="form-control" placeholder="Enter Selling price" 
+              required>
+            <input type="number" id="Cp" min="0" step="0.01" class="form-control" placeholder="Enter Cost price" 
+              required>
+          </div>
+
+          <div class="alert alert-primary" role="alert">
+            <div id="result1"><span><strong>Loss: </strong></span><output id="x" name="x"
+                form="form_loss_1">0</output></div>
+
+            <div id="result2"><span><strong>Loss(%): </strong></span><output id="y" name="y"
+                form="form_loss_1">0</output><span> %</span></div>
+            </div>
+            </form>
+
+            <hr class="my-4">
+            <p class="font-weight-bold">
+            <h5>If a trader professes to sell his goods at cost price, but uses false weights then gain% :-</h5>
+            </p>
+
+            <form id="trader" onsubmit="return false" oninput="x.value= trader(parseFloat(E.value),parseFloat(T.value)).toFixed(2)">
+            <div class="mt-1 mb-1 ml-1 mr-1 input-group">
+            <div class="input-group-prepend">
+              <button class="btn btn-outline-secondary" type="reset">Reset Profit</button>
+            </div>
+            <input type="number" id="T" min="0" step="0.01" class="form-control" placeholder="True Value" 
+              required>
+            <input type="number" id="E" min="0" step="0.01" class="form-control" placeholder="Error" 
+              required>
+          </div>
+
+          <div class="alert alert-primary" role="alert">
+            <div id="result"><span><strong>Gain(%): </strong></span><output id="x" name="x"
+                form="trader">0</output></div>
+            </div>
+            </form>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="collapse" id="collapse_sp">
+    <div class="card card-body">
+        <button class="btn close" data-toggle="collapse" href="#collapse_sp" role="button" aria-expanded="false">
+            <span aria-hidden="true">×</span>
+        </button>
+        <div class="container-fluid">
+            <div class="jumbotron" onclick="nonegetive(this)"> 
+
+                <p class="font-weight-bold">
+                <h2>Selling Price (SP)</h2>
+                </p>
+                <p class="font-weight-bold">
+                <h5>with Profit%</h5>
+                </p>
+                
+            <form id="form_sp_1" onsubmit="return false" oninput="x.value= sp_perc_p(parseFloat(p.value),parseFloat(Cp.value)).toFixed(2)">
+            <div class="mt-1 mb-1 ml-1 mr-1 input-group">
+            <div class="input-group-prepend">
+              <button class="btn btn-outline-secondary" type="reset">Reset SP</button>
+            </div>
+            <input type="number" id="p" min="0" step="0.01" class="form-control" placeholder="Enter Profit Percent" 
+              required>
+            <input type="number" id="Cp" min="0" step="0.01" class="form-control" placeholder="Enter Cost price" 
+              required>
+            </div>
+            <div class="alert alert-primary" role="alert">
+            <div id="result1"><span><strong>Selling Price: </strong></span><output id="x" name="x"
+                form="form_sp_1">0</output></div>
+            </div>
+            </form>
+
+            <p class="font-weight-bold">
+            <h5>with Loss%</h5>
+            </p>
+
+            <form id="form_sp_2" onsubmit="return false" oninput="x.value= sp_perc_l(parseFloat(p.value),parseFloat(Cp.value)).toFixed(2)">
+                <div class="mt-1 mb-1 ml-1 mr-1 input-group">
+                <div class="input-group-prepend">
+                  <button class="btn btn-outline-secondary" type="reset">Reset SP</button>
+                </div>
+                <input type="number" id="p" min="0" step="0.01" class="form-control" placeholder="Enter Loss Percent" 
+                  required>
+                <input type="number" id="Cp" min="0" step="0.01" class="form-control" placeholder="Enter Cost price" 
+                  required>
+                </div>
+                <div class="alert alert-primary" role="alert">
+                <div id="result1"><span><strong>Selling Price: </strong></span><output id="x" name="x"
+                    form="form_sp_2">0</output></div>
+                </div>
+            </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="collapse" id="collapse_cp">
+    <div class="card card-body">
+        <button class="btn close" data-toggle="collapse" href="#collapse_cp" role="button" aria-expanded="false">
+            <span aria-hidden="true">×</span>
+        </button>
+        <div class="container-fluid">
+            <div class="jumbotron" onclick="nonegetive(this)">
+
+                <p class="font-weight-bold">
+                <h2>Cost Price (CP)</h2>
+                </p>
+                <p class="font-weight-bold">
+                    <h5>with profit%</h5>
+                </p>
+                
+
+                <form id="form_cp_1" onsubmit="return false" oninput="x.value= cp_perc_p(parseFloat(p.value),parseFloat(sp.value)).toFixed(2)">
+                    <div class="mt-1 mb-1 ml-1 mr-1 input-group">
+                    <div class="input-group-prepend">
+                      <button class="btn btn-outline-secondary" type="reset">Reset CP</button>
+                    </div>
+                    <input type="number" id="p" min="0" step="0.01" class="form-control" placeholder="Enter Profit Percent" 
+                      required>
+                    <input type="number" id="sp" min="0" step="0.01" class="form-control" placeholder="Enter Selling price" 
+                      required>
+                    </div>
+                    <div class="alert alert-primary" role="alert">
+                    <div id="result1"><span><strong>Cost Price: </strong></span><output id="x" name="x"
+                        form="form_cp_1">0</output></div>
+                    </div>
+                </form>
+
+                <p class="font-weight-bold">
+                    <h5>with Loss%</h5>
+                </p>
+
+                <form id="form_cp_2" onsubmit="return false" oninput="x.value= cp_perc_l(parseFloat(l.value),parseFloat(sp.value)).toFixed(2)">
+                    <div class="mt-1 mb-1 ml-1 mr-1 input-group">
+                    <div class="input-group-prepend">
+                      <button class="btn btn-outline-secondary" type="reset">Reset CP</button>
+                    </div>
+                    <input type="number" id="l" min="0" step="0.01" class="form-control" placeholder="Enter Loss Percent" 
+                      required>
+                    <input type="number" id="sp" min="0" step="0.01" class="form-control" placeholder="Enter Selling price" 
+                      required>
+                    </div>
+                    <div class="alert alert-primary" role="alert">
+                    <div id="result1"><span><strong>Cost Price: </strong></span><output id="x" name="x"
+                        form="form_cp_2">0</output></div>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+</div>
