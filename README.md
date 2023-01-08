@@ -1,7 +1,7 @@
 # Aptitude Calculator 
 
 **Hey there everyone!** 🎉<br>
-This is a sample good looking Scientific calculator on the web. This project is a demonstration of **Component Based Design** using templates in Flask.
+This is a sample code for a good looking scientific calculator on the web. This project is a demonstration of **Component Based Design** using templates in Flask.
 <br>
 
 >For now its recommend using our webApp on PC or if using on mobile phones, use it on landscape mode (horizontal orientation).
